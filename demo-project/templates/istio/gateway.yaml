@@ -1,0 +1,15 @@
+## Pipeline test
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: {{ include "demo-project.fullname" . }}
+spec:
+  selector:
+    istio: {{ .Values.istioSelector }}
+  servers:
+  - hosts:
+    - '{{ .Values.domain }}''
+    port:
+      name: http
+      number: 80
+      protocol: HTTP 

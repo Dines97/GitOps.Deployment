@@ -10,3 +10,7 @@ webapi:
 message: Hello from test
 
 secret: containerreg
+
+domain: project.test.gitops.io
+
+istioSelector: gateway

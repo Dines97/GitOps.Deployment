@@ -10,3 +10,7 @@ webapi:
 message: Hello from prod
 
 secret: containerreg
+
+domain: project.prod.gitops.io
+
+istioSelector: gateway
