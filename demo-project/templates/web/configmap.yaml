@@ -15,5 +15,5 @@ data:
         }
       },
       "AllowedHosts": "*",
-      "WebApiUrl": "http://localhost:5170"
+      "WebApiUrl": "http://{{ include "demo-project.fullname" . }}-webapi"
     }

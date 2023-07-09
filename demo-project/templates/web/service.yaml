@@ -7,7 +7,7 @@ metadata:
     {{- include "demo-project.labels" . | nindent 4 }}
 spec:
   ports:
-  - port: 5171
+  - port: 80
     targetPort: http
     protocol: TCP
     name: http
