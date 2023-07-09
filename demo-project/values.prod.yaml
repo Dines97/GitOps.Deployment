@@ -1,10 +1,10 @@
 web:
   image:
-    name: web
+    repository: eu.gcr.io/dt-anthos-onpremise/demo-project-web
     tag: latest
 webapi:
   image:
-    name: webapi
+    repository: eu.gcr.io/dt-anthos-onpremise/demo-project-webapi
     tag: latest
 
 message: Hello from prod
