@@ -5,7 +5,7 @@ web:
 webapi:
   image:
     repository: eu.gcr.io/dt-anthos-onpremise/demo-project-webapi
-    tag: latest
+    tag: master_20230709_2
   tag: master_20230709_2
 message: Hello from test
 secret: containerreg
