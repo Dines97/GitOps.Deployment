@@ -28,4 +28,4 @@ spec:
   - name: web
     route:
     - destination:
-        host: {{ include "demo-project.fullname" . }}-webapi
+        host: {{ include "demo-project.fullname" . }}-web
