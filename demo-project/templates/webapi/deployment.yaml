@@ -24,7 +24,8 @@ spec:
         image: "{{ .Values.webapi.image.repository }}:{{ .Values.webapi.image.tag}}"
         volumeMounts:
         - name: configmap-volume
-          mountPath: /app/config
+          mountPath: /app/appsettings.json
+          subPath: appsettings.json
         ports:
         - containerPort: 80
           protocol: TCP
