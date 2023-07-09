@@ -25,6 +25,9 @@ spec:
         volumeMounts:
         - name: configmap-volume
           mountPath: /app/config
+        ports:
+        - containerPort: 80
+          protocol: TCP
       volumes:
       - name: configmap-volume
         configMap:
