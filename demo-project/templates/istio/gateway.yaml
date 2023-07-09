@@ -8,7 +8,7 @@ spec:
     istio: {{ .Values.istioSelector }}
   servers:
   - hosts:
-    - '{{ .Values.domain }}''
+    - '{{ .Values.domain }}'
     port:
       name: http
       number: 80
