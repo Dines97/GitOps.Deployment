@@ -15,6 +15,6 @@ data:
         }
       },
       "AllowedHosts": "*",
-      "Message": "{{ .Values.message }}}"
+      "Message": "{{ .Values.message }}"
     }
 
