@@ -1,0 +1,12 @@
+web:
+  image:
+    name: web
+    tag: latest
+webapi:
+  image:
+    name: webapi
+    tag: latest
+
+message: Hello from prod
+
+secret: containerreg

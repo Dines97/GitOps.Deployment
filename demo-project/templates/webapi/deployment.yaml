@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "demo-project.fullname" . }}-web
+  labels:
+    app: webapi
+    {{- include "demo-project.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapi
+      {{- include "demo-project.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app: webapi
+        {{- include "demo-project.selectorLabels" . | nindent 8 }}
+    spec:
+      imagePullSecrets:
+      - name: {{ .Values.secret }}
+      containers:
+      - name: webapi
+        image: "{{ .Values.webapi.image.repository }}:{{ .Values.webapi.image.tag}}"
+        volumeMounts:
+        - name: configmap-volume
+          mountPath: /app/config
+      volumes:
+      - name: configmap-volume
+        configMap:
+          name: {{ include "demo-project.fullname" . }}-webapi
+          
+          

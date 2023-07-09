@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "demo-project.fullname" . }}-web
+  labels:
+    app: web
+    {{- include "demo-project.labels" . | nindent 4 }}
+spec:
+  ports:
+  - port: 5171
+    targetPort: http
+    protocol: TCP
+    name: http
+  selector:
+    app: web
+    {{- include "demo-project.selectorLabels" . | nindent 4 }}
