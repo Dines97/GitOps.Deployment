@@ -2,15 +2,12 @@ web:
   image:
     repository: eu.gcr.io/dt-anthos-onpremise/demo-project-web
     tag: latest
+  tag: master_20230709_3
 webapi:
   image:
     repository: eu.gcr.io/dt-anthos-onpremise/demo-project-webapi
     tag: latest
-
 message: Hello from prod
-
 secret: containerreg
-
 domain: project.prod.gitops.io
-
 istioSelector: gateway
