@@ -1,7 +1,7 @@
 web:
   image:
     repository: eu.gcr.io/dt-anthos-onpremise/demo-project-web
-    tag: master_20230709_6
+    tag: master_20230710_1
 webapi:
   image:
     repository: eu.gcr.io/dt-anthos-onpremise/demo-project-webapi
